@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Emprendimiento Digital - Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Mi Emprendimiento</h1>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Transformamos tu idea en una experiencia digital real</h2>
+      <p>Explora nuestros productos y servicios con la ayuda de nuestra tecnología integrada.</p>
+      <a href="catalogo.html" class="btn">Ver Catálogo</a>
+    </section>
+  </main>
+
+  <!-- Módulo de IA Aplicada (Chatbot / Asistente) -->
+  <aside id="chatbot-container">
+    <h3>Asistente IA</h3>
+    <div id="chat-logs">
+      <p><strong>IA:</strong> ¡Hola! ¿En qué puedo ayudarte hoy con nuestro emprendimiento?</p>
+    </div>
+    <div class="chat-input-group">
+      <input type="text" id="chat-input" placeholder="Pregúntame algo...">
+      <button onclick="enviarMensajeIA()">Enviar</button>
+    </div>
+  </aside>
+
+  <!-- Enlace al archivo de JavaScript de la IA -->
+  <script src="js/ia.js"></script>
+</body>
+</html>
