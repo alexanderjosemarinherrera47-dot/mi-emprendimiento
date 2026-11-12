@@ -3,34 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel Admin - Mi Emprendimiento</title>
+  <title>Panel Admin - Armonía Orgánica</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <nav>
-      <h1>Mi Marca</h1>
+      <h1>🌿 Armonía Orgánica</h1>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="catalogo.html">Calculadora y Pedidos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="admin.html">Admin</a></li>
+        <li><a href="admin.html">Panel Admin</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
+    <!-- Vista de Login -->
+    <section id="login-section" style="max-width: 420px; margin: 0 auto;">
       <form id="loginForm">
-        <h2 style="text-align: center; margin-bottom: 10px;">Acceso Administrador</h2>
-        <input type="text" id="usuario" placeholder="Usuario" required />
-        <input type="password" id="password" placeholder="Contraseña" required />
-        <button type="submit">Iniciar Sesión</button>
+        <h2 style="text-align: center; color: #1b4332;">🔐 Acceso Administrador</h2>
+        <p style="text-align: center; font-size: 0.9rem; color: #666;">Ingresa la clave maestra para gestionar los pedidos.</p>
+        <input type="password" id="admin-pass" placeholder="Contraseña (admin2026)" required>
+        <button type="submit" class="btn">Ingresar al Panel</button>
       </form>
+    </section>
+
+    <!-- Vista Dashboard Admin -->
+    <section id="dashboard-section" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>📊 Gestión de Pedidos y Ventas</h2>
+        <button onclick="cerrarSesionAdmin()" class="btn" style="background: #b91c1c;">Cerrar Sesión</button>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 25px;">
+        <div class="card">
+          <h3>Total Kilos Vendidos</h3>
+          <p id="stat-kilos" style="font-size: 2rem; font-weight: bold; color: #2d6a4f;">0 kg</p>
+        </div>
+        <div class="card">
+          <h3>Ingresos Totales</h3>
+          <p id="stat-ingresos" style="font-size: 2rem; font-weight: bold; color: #1b4332;">$0 COP</p>
+        </div>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Teléfono</th>
+              <th>Dirección</th>
+              <th>Kilos</th>
+              <th>Total</th>
+              <th>Pago</th>
+              <th>Estado</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-pedidos"></tbody>
+        </table>
+      </div>
     </section>
   </main>
 
+  <footer>
+    <p>© 2026 Armonía Orgánica | Panel Administrativo</p>
+  </footer>
+
   <script src="js/auth.js"></script>
-  <script src="js/ia.js"></script>
 </body>
 </html>

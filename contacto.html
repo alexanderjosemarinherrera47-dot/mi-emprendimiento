@@ -3,34 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto - Mi Emprendimiento</title>
+  <title>Contacto - Armonía Orgánica</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <nav>
-      <h1>Mi Marca</h1>
+      <h1>🌿 Armonía Orgánica</h1>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="catalogo.html">Calculadora y Pedidos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="admin.html">Admin</a></li>
+        <li><a href="admin.html">Panel Admin</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <form id="contactForm">
-        <h2 style="text-align: center; margin-bottom: 10px;">Contáctanos</h2>
-        <input type="text" id="nombre" placeholder="Tu Nombre" required />
-        <input type="email" id="email" placeholder="Tu Correo Electrónico" required />
-        <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje o solicitud..." required></textarea>
-        <button type="submit">Enviar Solicitud</button>
-      </form>
+    <section class="hero">
+      <h2>Contáctanos</h2>
+      <p>Atención directa para pedidos al por mayor, asesorías agrónomas y soporte.</p>
     </section>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>📌 Información Oficial</h3>
+        <p style="margin: 12px 0;"><strong>Autora y Directora:</strong><br>Luisa Carolina Hoyos Contreras</p>
+        <p style="margin: 12px 0;"><strong>📧 Correo electrónico:</strong><br><a href="mailto:luisahoyos980@gmail.com">luisahoyos980@gmail.com</a></p>
+        <p style="margin: 12px 0;"><strong>📱 Teléfono / WhatsApp:</strong><br><a href="https://wa.me/573147780850" target="_blank">314 778 0850</a></p>
+        <p style="margin: 12px 0;"><strong>📸 Instagram Oficial:</strong><br><a href="https://instagram.com/armoniaverde_oficiall" target="_blank">@armoniaverde_oficiall</a></p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('¡Mensaje enviado a Luisa Carolina! Te responderemos pronto.'); this.reset();">
+        <h3>✉️ Envíanos un Mensaje</h3>
+        <input type="text" placeholder="Tu Nombre" required>
+        <input type="email" placeholder="Tu Correo" required>
+        <textarea rows="4" placeholder="Escribe tu consulta sobre Armonía Orgánica..." required></textarea>
+        <button type="submit" class="btn">Enviar Mensaje</button>
+      </form>
+    </div>
   </main>
 
-  <script src="js/ia.js"></script>
+  <footer>
+    <p>© 2026 Armonía Orgánica | @armoniaverde_oficiall</p>
+  </footer>
 </body>
 </html>

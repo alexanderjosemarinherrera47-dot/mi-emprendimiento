@@ -3,44 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Emprendimiento Digital - Inicio</title>
+  <title>🌿 Armonía Orgánica - Inicio</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
   <header>
     <nav>
-      <h1>Mi Emprendimiento</h1>
+      <h1>🌿 Armonía Orgánica</h1>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="catalogo.html">Calculadora y Pedidos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="admin.html">Admin</a></li>
+        <li><a href="admin.html">Panel Admin</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Transformamos tu idea en una experiencia digital real</h2>
-      <p>Explora nuestros productos y servicios con la ayuda de nuestra tecnología integrada.</p>
-      <a href="catalogo.html" class="btn">Ver Catálogo</a>
+      <h2>Nutrición 100% Natural para tus Cultivos y Jardines</h2>
+      <p>Abono orgánico de alta pureza a <strong>$7.000 COP por kilogramo</strong>. Regenera tus suelos y potencia el crecimiento de tus plantas de forma ecológica.</p>
+      <a href="catalogo.html" class="btn">Calcular Kilos y Pedir</a>
+    </section>
+
+    <section class="card">
+      <h3>🌱 Módulo de IA Agronómica Personalizada</h3>
+      <p style="margin-bottom: 15px; color: #555;">Completa los datos de tu cultivo y nuestra IA calculará la dosis exacta de abono orgánico que necesitas.</p>
+      <div class="grid-2">
+        <div>
+          <label>Tipo de plantas:</label>
+          <select id="ia-planta" style="width: 100%; margin-top: 5px;">
+            <option value="Hortalizas y Huerta">Hortalizas y Huerta</option>
+            <option value="Plantas Ornamentales / Jardín">Plantas Ornamentales / Jardín</option>
+            <option value="Árboles Frutales">Árboles Frutales</option>
+            <option value="Suculentas y Macetas">Suculentas y Macetas</option>
+          </select>
+        </div>
+        <div>
+          <label>Tamaño del espacio (m²):</label>
+          <input type="number" id="ia-espacio" placeholder="Ej: 10" min="1" style="width: 100%; margin-top: 5px;">
+        </div>
+        <div>
+          <label>Clima de la zona:</label>
+          <select id="ia-clima" style="width: 100%; margin-top: 5px;">
+            <option value="Cálido / Tropical">Cálido / Tropical</option>
+            <option value="Templado">Templado</option>
+            <option value="Frío">Frío</option>
+          </select>
+        </div>
+        <div>
+          <label>Condición actual del suelo:</label>
+          <select id="ia-suelo" style="width: 100%; margin-top: 5px;">
+            <option value="Seco o desgastado">Seco o desgastado</option>
+            <option value="Normal / Mixto">Normal / Mixto</option>
+            <option value="Arcilloso o compacto">Arcilloso o compacto</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn" onclick="calcularDosisIA()" style="margin-top: 18px;">Analizar con IA Agronómica</button>
+      <div id="resultado-ia-agronomica" style="margin-top: 15px; padding: 15px; background: #e9f5ee; border-radius: 8px; display: none;"></div>
     </section>
   </main>
 
-  <!-- Módulo de IA Aplicada (Chatbot / Asistente) -->
   <aside id="chatbot-container">
-    <h3>Asistente IA</h3>
+    <h3>🤖 Chatbot Armonía 24/7</h3>
     <div id="chat-logs">
-      <p><strong>IA:</strong> ¡Hola! ¿En qué puedo ayudarte hoy con nuestro emprendimiento?</p>
+      <p><strong>IA:</strong> ¡Hola! Bienvenido a Armonía Orgánica ($7.000/kg). Pregúntame sobre dosis, envíos o beneficios para tus plantas.</p>
     </div>
     <div class="chat-input-group">
-      <input type="text" id="chat-input" placeholder="Pregúntame algo...">
+      <input type="text" id="chat-input" placeholder="Escribe tu duda...">
       <button onclick="enviarMensajeIA()">Enviar</button>
     </div>
   </aside>
 
-  <!-- Enlace al archivo de JavaScript de la IA -->
+  <footer>
+    <p>© 2026 Armonía Orgánica | Desarrollado por Luisa Carolina Hoyos Contreras - Jóvenes CreaTivos</p>
+  </footer>
+
   <script src="js/ia.js"></script>
 </body>
 </html>

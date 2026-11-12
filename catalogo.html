@@ -3,61 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo - Abonos Orgánicos</title>
+  <title>Calculadora y Pedidos - Armonía Orgánica</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <nav>
-      <h1>EcoAbonos</h1>
+      <h1>🌿 Armonía Orgánica</h1>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="catalogo.html">Calculadora y Pedidos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="admin.html">Admin</a></li>
+        <li><a href="admin.html">Panel Admin</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Catálogo de Abonos Orgánicos</h2>
-      <p>Nutrición 100% natural para tus plantas, cultivos y jardines.</p>
+      <h2>Calculadora de Abono Orgánico</h2>
+      <p>Valor oficial: <strong>$7.000 COP por kilogramo</strong>. Calcula tu pedido y regístralo en segundos.</p>
     </section>
 
-    <section class="productos-grid">
-      <div class="tarjeta-producto">
-        <h3>Humus de Lombriz (1 kg)</h3>
-        <p>Abono orgánico enriquecido con microorganismos benéficos para el suelo.</p>
-        <span class="precio">$15.000 COP</span>
+    <div class="grid-2">
+      <div class="card">
+        <h3>⚖️ Calcula según tu necesidad</h3>
+        <p style="margin-bottom: 12px; font-size: 0.9rem;">Ingresa los kilos que deseas o calcula cuántos kilos te alcanzan según tu presupuesto:</p>
+        
+        <label>Cantidad en Kilogramos (kg):</label>
+        <input type="number" id="calc-kilos" value="1" min="1" oninput="calcularDesdeKilos()" style="width: 100%; margin: 8px 0 15px;">
+
+        <label>O ingresa tu presupuesto en COP ($):</label>
+        <input type="number" id="calc-presupuesto" placeholder="Ej: 35000" step="1000" oninput="calcularDesdePresupuesto()" style="width: 100%; margin: 8px 0 15px;">
+
+        <div style="background: #e9f5ee; padding: 15px; border-radius: 8px; margin-top: 10px;">
+          <p><strong>Kilos a llevar:</strong> <span id="res-kilos">1</span> kg</p>
+          <p style="font-size: 1.25rem; color: #1b4332; margin-top: 5px;"><strong>Total a pagar: $<span id="res-total">7.000</span> COP</strong></p>
+        </div>
       </div>
 
-      <div class="tarjeta-producto">
-        <h3>Compost Madurado (5 kg)</h3>
-        <p>Mezcla orgánica ideal para preparar terrenos de siembra y macetas.</p>
-        <span class="precio">$25.000 COP</span>
-      </div>
-
-      <div class="tarjeta-producto">
-        <h3>Biofertilizante Líquido (1 L)</h3>
-        <p>Nutriente foliar orgánico de rápida absorción para crecimiento fuerte.</p>
-        <span class="precio">$18.000 COP</span>
-      </div>
-    </section>
+      <form id="form-pedido">
+        <h3>📦 Realizar Pedido Real</h3>
+        <input type="text" id="ped-nombre" placeholder="Nombre completo del cliente" required>
+        <input type="tel" id="ped-telefono" placeholder="Teléfono / WhatsApp" required>
+        <input type="text" id="ped-direccion" placeholder="Dirección de entrega" required>
+        <select id="ped-pago" required>
+          <option value="Nequi / Daviplata">Nequi / Daviplata</option>
+          <option value="Transferencia Bancolombia">Transferencia Bancolombia</option>
+          <option value="Pago Contra Entrega">Pago Contra Entrega</option>
+        </select>
+        <button type="submit" class="btn">Confirmar Pedido</button>
+      </form>
+    </div>
   </main>
 
-  <!-- Asistente de IA integrado -->
   <aside id="chatbot-container">
-    <h3>Asistente IA - EcoAbonos</h3>
+    <h3>🤖 Chatbot Armonía 24/7</h3>
     <div id="chat-logs">
-      <p><strong>IA:</strong> ¡Hola! Pregúntame sobre nuestros abonos orgánicos o cuál es el ideal para tus plantas.</p>
+      <p><strong>IA:</strong> ¿Necesitas ayuda calculando cuántos kilos pedir? ¡Escríbeme!</p>
     </div>
     <div class="chat-input-group">
-      <input type="text" id="chat-input" placeholder="Pregúntame algo...">
+      <input type="text" id="chat-input" placeholder="Escribe tu duda...">
       <button onclick="enviarMensajeIA()">Enviar</button>
     </div>
   </aside>
 
+  <footer>
+    <p>© 2026 Armonía Orgánica | Luisa Carolina Hoyos Contreras</p>
+  </footer>
+
+  <script src="js/app.js"></script>
   <script src="js/ia.js"></script>
 </body>
 </html>
