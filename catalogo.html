@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo - Mi Emprendimiento</title>
+  <title>Catálogo - Abonos Orgánicos</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <nav>
-      <h1>Mi Marca</h1>
+      <h1>EcoAbonos</h1>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="catalogo.html">Catálogo</a></li>
@@ -21,10 +21,42 @@
 
   <main>
     <section class="hero">
-      <h2>Nuestro Catálogo</h2>
-      <p>Descubre los productos y servicios diseñados especialmente para ti.</p>
+      <h2>Catálogo de Abonos Orgánicos</h2>
+      <p>Nutrición 100% natural para tus plantas, cultivos y jardines.</p>
+    </section>
+
+    <section class="productos-grid">
+      <div class="tarjeta-producto">
+        <h3>Humus de Lombriz (1 kg)</h3>
+        <p>Abono orgánico enriquecido con microorganismos benéficos para el suelo.</p>
+        <span class="precio">$15.000 COP</span>
+      </div>
+
+      <div class="tarjeta-producto">
+        <h3>Compost Madurado (5 kg)</h3>
+        <p>Mezcla orgánica ideal para preparar terrenos de siembra y macetas.</p>
+        <span class="precio">$25.000 COP</span>
+      </div>
+
+      <div class="tarjeta-producto">
+        <h3>Biofertilizante Líquido (1 L)</h3>
+        <p>Nutriente foliar orgánico de rápida absorción para crecimiento fuerte.</p>
+        <span class="precio">$18.000 COP</span>
+      </div>
     </section>
   </main>
+
+  <!-- Asistente de IA integrado -->
+  <aside id="chatbot-container">
+    <h3>Asistente IA - EcoAbonos</h3>
+    <div id="chat-logs">
+      <p><strong>IA:</strong> ¡Hola! Pregúntame sobre nuestros abonos orgánicos o cuál es el ideal para tus plantas.</p>
+    </div>
+    <div class="chat-input-group">
+      <input type="text" id="chat-input" placeholder="Pregúntame algo...">
+      <button onclick="enviarMensajeIA()">Enviar</button>
+    </div>
+  </aside>
 
   <script src="js/ia.js"></script>
 </body>

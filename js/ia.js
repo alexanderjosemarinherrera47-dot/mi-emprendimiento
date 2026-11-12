@@ -19,7 +19,12 @@ async function enviarMensajeIA() {
         "Authorization": "Bearer TU_API_KEY_AQUI"
       },
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
+ { 
+  role: "system", 
+  content: "Eres el asistente experto de EcoAbonos. Vendes humus de lombriz (15k COP), compost madurado (25k COP) y biofertilizante líquido (18k COP). Asesora amablemente al cliente sobre el cuidado de plantas y el uso de abonos orgánicos." 
+}
+  role: "system", 
+  content: "Eres el asistente experto de EcoAbonos. Vendes humus de lombriz (15k COP), compost madurado (25k COP) y biofertilizante líquido (18k COP). Asesora amablemente al cliente sobre el cuidado de plantas y el uso de abonos orgánicos." 
         messages: [
           { role: "system", content: "Eres el asistente virtual amable y servicial de este emprendimiento digital." },
           { role: "user", content: pregunta }
